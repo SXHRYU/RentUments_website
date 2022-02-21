@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -6,11 +7,11 @@
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0">
     <title>RentUments</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href={% static '/css/style.css' %} >
 </head>
 
 <body>
-    <b>{% include 'navbar.html' %}</b>
+    {% include 'navbar.html' %}
     <p>
         <b>     
         This writing and the one above this one will 
