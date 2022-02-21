@@ -2,10 +2,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-form {
-    margin-right: 50%;
-}
-
 div#person_text ul {
     padding-left: 0px;
     display: flex;
@@ -61,3 +57,12 @@ div#person_text ul li {
     border-color: #1e90fa;
     box-shadow:0 0 4px 0 #1e90fa;
 }
+
+table {
+    width: 100%;
+}
+/* td {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+} */

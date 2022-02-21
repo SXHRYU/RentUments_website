@@ -1,28 +1,17 @@
 {% extends 'base.html' %}
 {% block cnt %}
-<form>
-    <div id="person_text"> 
-        <ul>
-            <li>FIRST NAME*</li>
-            <li>LAST NAME*</li>
-        </ul>
-    </div>
-    
-    <div id="person_input">
-        <input type="text" class="name">        
-        <input type="text" class="name">
-    </div>
 
-    <p>YOUR EMAIL*</p>
-    <input type="email" id="email">
-    
-    <p>MESSAGE*</p>
-    <textarea type="textarea" id="message"></textarea>
-    
-    <br> <br>
-    <button>send message</button>
-</form>
-
+<table style="margin-right: 0px">
+    <tr>
+        <td style="width:302px">
+            {% include 'includes/form.html' %}
+        </td>
+        <td id="qck" style="vertical-align: text-top">
+            <p style="font-size: 50px; 
+                text-align: center; margin-top: 0px;">Quick fixes</p>
+        </td>
+    </tr>
+</table>
 
 <p>Or You can contact us at:</p>
 {% comment %} <a href="mailto:slavadjango@gmail.com">email</a> </br> {% endcomment %}

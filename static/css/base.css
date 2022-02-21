@@ -1,3 +1,6 @@
+* {
+    background-color: #dfe8eb;
+}
 nav {
     justify-content: space-between;
     background-color: darksalmon;
@@ -9,18 +12,21 @@ nav {
 nav ul {
     display: flex;
     padding: 0 5% 0 30%;
+    background-color: inherit;
 }
 
 nav ul li {
     list-style-type: none;
     width: 150px;
     text-align: center;
+    background-color: inherit;
 }
 
 li a {
     text-decoration: none;
     color: white;
     display: block;
+    background-color: inherit;
 }
 
 li a:hover {
