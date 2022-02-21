@@ -1,5 +1,32 @@
 {% extends 'base.html' %}
+{% block cnt %}
+<form>
+    <div id="person_text"> 
+        <ul>
+            <li>FIRST NAME*</li>
+            <li>LAST NAME*</li>
+        </ul>
+    </div>
+    
+    <div id="person_input">
+        <input type="text" class="name">        
+        <input type="text" class="name">
+    </div>
 
-{% block another_one %}
+    <p>YOUR EMAIL*</p>
+    <input type="email" id="email">
+    
+    <p>MESSAGE*</p>
+    <textarea type="textarea" id="message"></textarea>
+    
+    <br> <br>
+    <button>send message</button>
+</form>
 
-{% endblock another_one %}
+
+<p>Or You can contact us at:</p>
+{% comment %} <a href="mailto:slavadjango@gmail.com">email</a> </br> {% endcomment %}
+<a href="t.me/SXRu1">Telegram</a>
+{% endblock cnt %}
+
+{% block another_one %}{% endblock another_one %}
