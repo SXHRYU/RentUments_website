@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block cnt %}
+    <p>If we replace the first {block cnt} but leave the 
+        second one intact, first {block cnt} 
+        gets replaced as in 'about.html'. But the second 
+        {block another_one} will remain 
+        as in 'base.html'
+    </p>
+
+
+     <p>   {{ my_text }}, {{ my_number }} </p>
+        
+        {% for i in my_list %} 
+        <p>{{ i }}</p>
+        {% endfor %}
+<hr>
+        {% for i in my_list %} 
+            {{ i }} </br>
+        {% endfor %}
+
+
+        {% if True %}
+            {% for i in '0123456789'|make_list %}
+                {% if forloop.counter == 6 %}
+                    Hi!, forloop.counter = 6 </br>
+                {% else %}
+                    {{ forloop.counter|add:22 }} </br>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+{% endblock cnt %}
+{% block another_one %}{% endblock another_one %}
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+    <title>RentUments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <b>{% include 'navbar.html' %}</b>
+    <p>
+        <b>     
+        This writing and the one above this one will 
+        not go away in other pages, because they are not
+        in {block}.
+        </b>
+    </p>
+    {% block cnt %}
+    <p><b>Contents of {block cnt}</b></p> 
+    {% endblock cnt %}
+    
+    {% block another_one %}
+    <p><b>Contents of {block another_one}</b></p>
+    {% endblock another_one  %}
+    
+    </body>
+</html>
