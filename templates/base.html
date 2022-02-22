@@ -9,6 +9,7 @@
     <title>RentUments</title>
     <link rel="stylesheet" href={% static '/css/navbar.css' %} >
     <link rel="stylesheet" href={% static '/css/contacts.css' %} >
+    <link rel="stylesheet" href={% static '/css/footer.css' %} >
 </head>
 
 <body>
@@ -28,5 +29,6 @@
     <p><b>Contents of {block another_one}</b></p>
     {% endblock another_one  %}
     
+    {% include 'includes/footer.html' %}
     </body>
 </html>

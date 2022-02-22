@@ -1,0 +1,28 @@
+footer {
+    width: 100%;
+    float: left;
+    background-color: whitesmoke;
+    margin-top: 25px;
+    box-shadow: 0 0 25px 25px whitesmoke;   
+}
+
+#footer_div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    background-color: inherit;
+    margin-left: 40px;
+}
+
+footer p {
+    background-color: inherit;
+}
+
+footer p a {
+    background-color: inherit;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #2b6b96;
+}
