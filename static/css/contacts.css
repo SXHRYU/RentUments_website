@@ -66,3 +66,28 @@ table {
     border-style: solid;
     border-color: black;
 } */
+
+#quick_fix {
+    padding-left: 20%;
+}
+
+.qck_br {
+    display: block;
+    content: "";
+    margin-top: 20px;
+}
+
+
+.qck_p {
+    padding-left: 20%;
+}
+
+.qck_p2 {
+    padding-left: 20%;
+    font-size: 14px;
+}
+
+hr {
+    margin-left: 20%;
+}
+
