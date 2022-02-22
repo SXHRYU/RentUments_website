@@ -1,12 +1,15 @@
+{% load static %}
 <body>
     <nav>
         <ul>
-            <li> <a href="../"> Home </a></li>
-            <li> <a href="../about/"> About    </a></li>
-            <li> <a href="../products/"> Products </a></li>
-            <li> <a href="../contacts/"> Contacts </a></li>
-            <li> <a href="../cart/"> Cart (WIP)     </a></li>
-            <li> <a href="../profile/"> Profile (WIP)  </a></li>
+            <li> <a href="../">Home</a></li>
+            <li> <a href="../about/">About</a></li>
+            <li> <a href="../products/">Products</a></li>
+            <li> <a href="../contacts/">Contacts</a></li>
+            <li> <a href="../cart/">
+                <img src="{% static 'img/cart.png' %}" alt="Cart" class="logo"></a></li>
+            <li> <a href="../profile/">
+                <img src="{% static 'img/profile.png' %}" alt="Profile" class="logo"></a></li>
         </ul>
     </nav>   
 </body>

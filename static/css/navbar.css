@@ -25,11 +25,18 @@ nav ul li {
 li a {
     text-decoration: none;
     color: white;
-    display: block;
+    /* display: block; */
     background-color: inherit;
 }
 
-li a:hover {
+
+/* li a:hover {
     background-color: black;
     opacity: 0.5;
+} */
+
+.logo {
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
 }
