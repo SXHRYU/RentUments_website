@@ -17,8 +17,5 @@ def about_view(request, *args, **kwargs):
 def contact_view(request, *args, **kwargs):
     return render(request, "contacts.html", {})
 
-def login_view(request, *args, **kwargs):
-    return render(request, 'login.html', {})
-
 def cart_view(request, *args, **kwargs):
     return render(request, 'cart.html', {})
