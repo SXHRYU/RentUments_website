@@ -15,7 +15,7 @@ def about_view(request, *args, **kwargs):
     return render(request, "about.html", my_context)
 
 def contact_view(request, *args, **kwargs):
-    return render(request, "contacts.html", {})
+    return render(request, "contact.html", {})
 
 def cart_view(request, *args, **kwargs):
     return render(request, 'cart.html', {})
