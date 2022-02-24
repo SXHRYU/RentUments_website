@@ -20,5 +20,8 @@ def contact_view(request, *args, **kwargs):
 def contacts_view(request, *args, **kwargs):
     return render(request, 'contacts.html', {})
 
+def catalogue_view(request, *args, **kwargs):
+    return render(request, 'catalogue.html', {})
+
 def cart_view(request, *args, **kwargs):
     return render(request, 'cart.html', {})
