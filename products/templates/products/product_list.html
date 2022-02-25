@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block cnt %}
+
+{% for i in object_list %}
+    <p> {{ i }} - <a href="{{ i.get_absolute_url }}">{{ i.title }}</a></p>
+{% endfor %}  
+
+{% endblock cnt %}
