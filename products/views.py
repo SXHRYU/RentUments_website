@@ -28,7 +28,7 @@ def product_create_view(request):
 
 # Create your views here.
 def product_detail_view(request, *args, **kwargs):
-    obj = Product.objects.get(id=37)
+    obj = Product.objects.get(id=1)
     # context = {
     #     'title': obj.title,
     #     'description': obj.description,
@@ -39,8 +39,8 @@ def product_detail_view(request, *args, **kwargs):
     }
     return render(request, 'products/product_detail.html', context)
 
-def dynamic_lookup_view(request):
-    obj = Product.objects.get(id=37)
+def dynamic_lookup_view(request, id):
+    obj = Product.objects.get(id=id)
     context = {
         'object': obj
     }
