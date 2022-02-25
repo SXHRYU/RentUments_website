@@ -15,23 +15,25 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import home_view, contact_view, contacts_view, about_view,  cart_view, catalogue_view
-from products.views import product_delete_view, product_detail_view, product_create_view, dynamic_lookup_view, product_list_view
+from pages.views import (home_view, contact_view, contacts_view, 
+                        about_view,  cart_view, catalogue_view)
+from products.views import (product_delete_view, product_detail_view, 
+                            product_create_view, dynamic_lookup_view, product_list_view)
 from accounts.views import login_view
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', home_view, name='home'),
-    path('home/', home_view, name='home'),
-    path('contact/', contact_view, name='contact'),
+    path('about/', about_view, name='about'),
+    path('admin/', admin.site.urls, name='admin'),
+    path('cart/', cart_view, name='cart'),
     path('catalogue/', catalogue_view, name='catalogue'),
+    path('contact/', contact_view, name='contact'),
     path('contacts/', contacts_view, name='contacts'),
     path('create/', product_create_view, name='create_products'),
-    path('products/', product_detail_view, name='products'),
-    path('about/', about_view, name='about'),
+    path('home/', home_view, name='home'),
     path('login/', login_view, name='login'),
-    path('cart/', cart_view, name='cart'),
+    path('products/', product_detail_view, name='products'),
+    path('products/all/', product_list_view, name='list'),
     path('products/<int:id>/', dynamic_lookup_view, name='dynamic'),
     path('products/<int:id>/delete/', product_delete_view, name='delete'),
-    path('products/all/', product_list_view, name='list'),
 ]
