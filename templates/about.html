@@ -1,36 +1,64 @@
 {% extends 'base.html' %}
 
 {% block cnt %}
-    <p>If we replace the first {block cnt} but leave the 
-        second one intact, first {block cnt} 
-        gets replaced as in 'about.html'. But the second 
-        {block another_one} will remain 
-        as in 'base.html'
-    </p>
-
-
-     <p>   {{ my_text }}, {{ my_number }} </p>
-        
-        {% for i in my_list %} 
-        <p>{{ i }}</p>
-        {% endfor %}
-<hr>
-        {% for i in my_list %} 
-            {{ i }} </br>
-        {% endfor %}
-
-
-        {% if True %}
-            {% for i in '0123456789'|make_list %}
-                {% if forloop.counter == 6 %}
-                    Hi!, forloop.counter = 6 </br>
-                {% else %}
-                    {{ forloop.counter|add:22 }} </br>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
+    <h1>RentUments website using Django</h1>
+        <h2>Intro</h2>
+            <p>This project was realised in the span of two weeks. While doing it I&#39;ve learned a lot of HTML and CSS, inline attributes and styling, margins/paddings/borders, forms and other stuff. It was very interesting to realise a project for the first time even such basic one. </p>
+            <p>For every component of a website a different git branch was created, i. e. for footer I used a &#39;footer&#39; branch, for navbar - &#39;navbar&#39; and so on. It was my first serious project where I&#39;ve used a lot of git branches, did a bunch of checkouts, different merges and so on.</p>
+        <h2>Accessing the website</h2>
+            <ol>
+                <li>Install <a href="https://www.python.org/downloads/">Python</a>;</li>
+                <li>Install Django: in console type (make sure you have PIP in your PATH variable) <code style="background-color: rgb(190, 184, 184); font-family: 'Courier New', Courier, monospace; font-weight: bold;">pip install Django</code>;</li>
+                <li>Copy the contents of the repository to your working directory;</li>
+                <li>Run in console <code style="background-color: rgb(190, 184, 184); font-family: 'Courier New', Courier, monospace; font-weight: bold;">python %location_of_your_directory%/manage.py runserver</code></li>
+                <li>If everything goes correctly you should see the line &quot;Starting development server at <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>&quot;</li>
+                <li>Open your browser and enter the url given in the previous line.</li>
+            </ol>
+        <h3>Guide</h3>
+            <h4>Navbar</h4>
+                <p>On the top you can see a logo I made in PhotoShop in 5 minutes, font is <a href="https://ru.ffonts.net/warcraft.font">WarCraft</a>. The navbar buttons are all clickable: </p>
+                <ul>
+                    <li>Home - to homepage;</li>
+                    <li>About - to this text;</li>
+                    <li>Products - to catalogue of items;
+                        <ul>
+                            <li>The buttons in the middle don&#39;t work except for &#39;Go to all products&#39;;
+                                <ul>
+                                    <li>Here you can click on any product that is in database, the site realises dynamic routing (you can also add items to database but more on that later);</li>
+                                    <li>After clicking on the item you can get back to the list of all items or delete the chosen product;</li>
+                                    <li>If you decide to delete the product, you will be asked for confirmation of the action. This deletes the product from the database.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Contact Us - this page containts the contact form and links (not-working) to possible questions. The form doesn&#39;t actually send anything. This page was more of a training ground where I trained CSS and HTML attributes;</li>
+                    <li>Cart - not realised;</li>
+                    <li>Login - leads to working login page.</li>
+                </ul>
+            <h4>All urls</h4>
+                <p>Click on any of the links to go to any working html file that was created.
+                <strong>Note:</strong> You must create a superuser before accessing admin page (base django admin page).</p>
+            <h4>Footer</h4>
+                <p>Only the &#39;Contacts&#39; page is intact with all the links there working as intended.</p>
+                <p>At the bottom are my contacts.</p>
+        <h3>Django side of the project</h3>
+            <p><strong>&#39;base.html&#39;:</strong> The fundamental file which has links to CSS, logo, &lt;head&gt; information. <br>
+            In order to use it as a template, every html page should have <strong>&#123% extends &#39;base.html&#39; %&#125</strong> tag in the beginning. This file has 2 django <strong>&#123% block %&#125</strong> tags which have content that, if replaced in the &#39;child&#39; files, will show the replaced information, otherwise it will show the original contents that are in &#39;base.html&#39;. You can see these blocks on &#39;home&#39;, &#39;cart&#39; pages
+            <strong>Note:</strong> Because the &#39;All urls&#39; is not in any <strong>&#123% block %&#125</strong> tag, it is not replaced in any html file and just loads from &#39;base.html&#39;.
+            It has 2 <strong>&#123%% include %&#125</strong> tags that load &#39;navbar.html&#39; and &#39;footer.html&#39;. 
+            <strong>&#123%% load static %&#125</strong> in the beginning is used to load the static files (images, CSS).</p>
+        <h3>Adding stuff to database</h3>
+            <p>You can add files to database using 2 methods:</p>
+            <ol>
+                <li>via the admin page after creating superuser (I&#39;ll write down the process in the end);</li>
+                <li>via the &#39;create&#39; page using the form. You don&#39;t have to login in order to do it (sadly, I didn&#39;t have time to realise this feature).</li>
+            </ol>
+        <h3>Creating a user and accessing admin page</h3>
+            <p>In your console run <code style="background-color: rgb(190, 184, 184); font-family: 'Courier New', Courier, monospace; font-weight: bold;">python %location_of_your_directory%/manage.py createsuperuser</code> then enter any username, email (not required), password. Now you can login via the &#39;Login&#39; page in navbar or &#39;admin&#39; url in the main body of the site.</p>
+    <h1>Thank you for trying out my project!</h2>
+        <p><a href="t.me/SXRU1">Telegram</a></p>
 
 {% endblock cnt %}
-{% block another_one %}{% endblock another_one %}
+{% block another_one %} {% endblock another_one %}
 
 
