@@ -27,7 +27,6 @@ def product_create_view(request):
     }
     return render(request, 'products/product_create.html', context)
 
-# Create your views here.
 def product_detail_view(request, *args, **kwargs):
     obj = Product.objects.get(id=1)
     # context = {
@@ -56,7 +55,7 @@ def product_delete_view(request, id):
     obj = get_object_or_404(Product, id=id)
     if request.method == 'POST':
         obj.delete()
-        return redirect('../../')
+        return redirect('../../all/')
     context = {
         'object': obj
     }
